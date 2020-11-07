@@ -10,7 +10,7 @@ const Card=({left,top})=>{
     <div className='card' style={cardStyle}>
       <div className="card-content">
         <p className="title">Beef</p>
-        <div className='content'>Home: <br/> Variety: </div>
+        <div className='content'>Home: Finland <br/> Variety: </div>
       </div>
     </div>
   )

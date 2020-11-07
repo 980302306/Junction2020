@@ -1,8 +1,7 @@
 import React from 'react'
 import Background from '../img/envResonsibility.png'
 import Header from './Header'
-import Co2Visualization from './Co2Visualization'
-const CO2=()=>{
+const H2O=()=>{
   const BgStyle={
     backgroundSize: 'cover',
     height: "100%",
@@ -36,11 +35,11 @@ const CO2=()=>{
           {/* <div className='content is-6'>CO2</div> */}
           <div className='columns'>
             <div className='column is-one-third'>
-              <h1 class="title is-1" style={TitleStyle}>CO2</h1>
-              <span style={SubTitleStyle}>Carbon <br/>Footprint</span>
+              <h1 class="title is-1" style={TitleStyle}>H2O</h1>
+              <span style={SubTitleStyle}> Water <br/>Footprint</span>
             </div>
             <div className='column is-one-third' style={DatavizStyle}>
-              < Co2Visualization/>
+              
             </div>
           </div>
           
@@ -53,5 +52,4 @@ const CO2=()=>{
     </section>
   )
 }
-
-export default CO2
+export default H2O
