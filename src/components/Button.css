@@ -1,0 +1,31 @@
+.TransparentButton{
+  position: absolute;
+  background-color: Transparent;
+  color:white;
+  border:none;
+  cursor:pointer;
+  font-size: 16px;
+  text-align: left;
+}
+.pos1{
+  left: 5%;
+  top: 15%;
+}
+.pos2{
+  left: 5%;
+  top: 33%;
+}
+.pos3{
+  left: 5%;
+  top: 50%;
+}
+.pos4{
+  left: 5%;
+  top: 66%;
+}
+.TransparentButton:hover{
+    text-decoration:underline;
+}
+.TransparentButton:focus{
+  outline: none;
+}

@@ -1,53 +1,22 @@
 import React,{useState} from 'react'
 import Background from '../img/cow.png'
-import Card from './Card'
+
 import Header from './Header'
-import { Link } from "react-router-dom"
-import Bubble from './Bubble'
+import './Button.css'
+import WelfarePanel from './WelfarePanel'
+import Panel from './Panel'
 const Cow=()=>{
   const [firstBubble,setFirstBubble]=useState('No')
   const [secondBubble,setSecondBubble]=useState('No')
   const [thirdBubble,setThirdBubble]=useState('No')
   const [fourthBubble,setFourthBubble]=useState('No')
-  // const CowStyle={
-  //   position: 'absolute',
-  // }
+  const [showPanel,setShowPanel]=useState('Yes')
+  const [WelfarePanelTitle,setWelfarePanelTitle]=useState('')
   const sectionStyle = {
     backgroundSize: 'cover',
     height: "100%",
     backgroundImage: `url(${Background})`,
     backgroundPosition: 'center'
-  }
-  const buttonStyle ={
-    borderRadius: '50%',
-  }
-  const firstLinkStyle={
-    position: 'absolute', left: '5%', top:'15%'
-  }
-  const secondLinkStyle={
-    position: 'absolute', left: '5%', top:'33%'
-  }
-  const thirdLinkStyle={
-    position: 'absolute', left: '5%', top:'50%'
-  }
-  const fourthLinkStyle={
-    position: 'absolute', left: '5%', top:'66%'
-  }
-  const firstButtonStyle={
-    position: 'absolute', left: '10.45138%', top:'86.9%',
-    borderRadius: '50%'
-  }
-  const secondButtonStyle={
-    position: 'absolute', left: '28.05%', top:'74.4%',
-    borderRadius: '50%'
-  }
-  const thirdButtonStyle={
-    position: 'absolute', left: '28.05%', top:'33.4%',
-    borderRadius: '50%'
-  }
-  const fourthButtonStyle={
-    position: 'absolute', left: '49.1%', top:'31.2%',
-    borderRadius: '50%'
   }
   const showFirstBubble=()=>setFirstBubble('Yes')
   const hideFirstBubble=()=>setFirstBubble('No')
@@ -57,37 +26,37 @@ const Cow=()=>{
   const hideThirdBubble=()=>setThirdBubble('No')
   const showFourthBubble=()=>setFourthBubble('Yes')
   const hideFourthBubble=()=>setFourthBubble('No')
+  const clickSideBarBtn1=()=>{
+    setShowPanel('No')
+    setWelfarePanelTitle('We live in good house.')
+  }
+  const clickSideBarBtn2=()=>{
+    setShowPanel('No')
+    setWelfarePanelTitle('We have good relationship with human.')
+  }
+  const clickSideBarBtn3=()=>{
+    setShowPanel('No')
+    setWelfarePanelTitle('We are fed well.')
+  }
+  const clickSideBarBtn4=()=>{
+    setShowPanel('No')
+    setWelfarePanelTitle('We are in very good health.')
+  }
   return(
     <div>
       <section className="hero is-fullheight" style={sectionStyle}>
       <Header />
         <div className='hero-body'>
           <div >
-            <Link to={`/meat/cows`} style={firstLinkStyle}>0 day<br/>Born</Link>
-            <Link to={`/meat/cows`} style={secondLinkStyle}>200 days<br/>Weaned</Link>
-            <Link to={`/meat/cows`} style={thirdLinkStyle}>400 days<br/>Finishing Phase</Link>
-            <Link to={`/meat/cows`} style={fourthLinkStyle}>600 days<br/>Harvested</Link>
-            <div>
-              <button className='button is-small' style={firstButtonStyle} onMouseOver={showFirstBubble} onMouseLeave={hideFirstBubble}></button>
-            </div>
-            <div>
-              <button className='button is-small' style={secondButtonStyle} onMouseOver={showSecondBubble} onMouseLeave={hideSecondBubble}></button>
-            </div>
-            <div>
-              <button className='button is-small' style={thirdButtonStyle} onMouseOver={showThirdBubble} onMouseLeave={hideThirdBubble}></button>
-            </div>
-            <div>
-              <button className='button is-small' style={fourthButtonStyle} onMouseOver={showFourthBubble} onMouseLeave={hideFourthBubble}></button>
-            </div>
-            <section className='section'>
-              <Bubble text='We are fed well' left='13%' top='86.9%'  show={firstBubble}/>
-              <Bubble text='We live in good house' left='31%' top='74.4%' show={secondBubble}/>
-              <Bubble text='We have good relationships with human' left='31%' top='34.4%' show={thirdBubble}/>
-              <Bubble text='We are in very good health' left='52%' top='31.2%' show={fourthBubble}/>
-            </section>
-            <section className='section'>
-              <Card left='67%' top='50%'/>
-            </section>
+            <button className='TransparentButton pos1' onClick={clickSideBarBtn1}>0 day<br/>Born</button>
+            <button className='TransparentButton pos2' onClick={clickSideBarBtn2}>200 days<br/>Weaned</button>
+            <button className='TransparentButton pos3' onClick={clickSideBarBtn3}>400 days<br/>Finishing Phase</button>
+            <button className='TransparentButton pos4' onClick={clickSideBarBtn4}>600 days<br/>Harvested</button>
+            <Panel showFirstBubble={showFirstBubble} showSecondBubble={showSecondBubble} showThirdBubble={showThirdBubble} showFourthBubble={showFourthBubble}
+                   hideFirstBubble={hideFirstBubble} hideSecondBubble={hideSecondBubble} hideThirdBubble={hideThirdBubble} hideFourthBubble={hideFourthBubble}
+                   firstBubble={firstBubble} secondBubble={secondBubble} thirdBubble={thirdBubble} fourthBubble={fourthBubble}
+                   showPanel={showPanel} />
+            <WelfarePanel title={WelfarePanelTitle} show={showPanel} setShow={setShowPanel}/>
           </div>
         </div>
      </section>

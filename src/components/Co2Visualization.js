@@ -150,11 +150,11 @@ function Co2Visualization(props) {
       var slice1;
       var slice2;
   
-      if (series1.slices.indexOf(targetSlice) != -1) {
+      if (series1.slices.indexOf(targetSlice) !== -1) {
           slice1 = targetSlice;
           slice2 = series2.dataItems.getIndex(targetSlice.dataItem.index).slice;
       }
-      else if (series2.slices.indexOf(targetSlice) != -1) {
+      else if (series2.slices.indexOf(targetSlice) !== -1) {
           slice1 = series1.dataItems.getIndex(targetSlice.dataItem.index).slice;
           slice2 = targetSlice;
       }
@@ -172,7 +172,7 @@ function Co2Visualization(props) {
       // tooltipY and tooltipY are in the middle of the slice, so we use them to avoid extra calculations
       var targetSlicePoint = am4core.utils.spritePointToSvg({ x: targetSlice.tooltipX, y: targetSlice.tooltipY }, targetSlice);
   
-      if (targetSlice == slice1) {
+      if (targetSlice === slice1) {
           if (targetSlicePoint.x > container.pixelWidth / 2) {
               var value = dataItem1.value;
   
@@ -192,7 +192,7 @@ function Co2Visualization(props) {
               slice1.animate([{ property: "x", to: 0 }, { property: "y", to: 0 }], 400);
           }
       }
-      if (targetSlice == slice2) {
+      if (targetSlice === slice2) {
           if (targetSlicePoint.x < container.pixelWidth / 2) {
   
               var value = dataItem2.value;
