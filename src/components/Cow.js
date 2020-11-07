@@ -1,5 +1,5 @@
 import React from 'react'
-import Background from '../img/cow.jpg'
+import Background from '../img/cow.png'
 import SideBar from './SideBar'
 import Card from './Card'
 import ButtonImage from '../img/button.png'
