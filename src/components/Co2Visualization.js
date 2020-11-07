@@ -1,16 +1,17 @@
-import React, { useRef, useLayoutEffect } from 'react';
+import React, {  useLayoutEffect } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import am4themes_dataviz from "@amcharts/amcharts4/themes/dataviz"
-
+import am4themes_frozen from"@amcharts/amcharts4/themes/frozen"
+am4core.useTheme(am4themes_frozen);
 am4core.useTheme(am4themes_animated);
 am4core.useTheme(am4themes_dataviz);
 
 function Co2Visualization(props) {
-  const chart = useRef(null);
+//   const chart = useRef(null);
 
   useLayoutEffect(() => {
     let container = am4core.create("chartdiv", am4core.Container);
@@ -57,7 +58,7 @@ function Co2Visualization(props) {
   })
   
   var chart1 = container.createChild(am4charts.PieChart);
-  chart1 .fontSize = 11;
+  chart1.fontSize = 11;
   chart1.hiddenState.properties.opacity = 0; // this makes initial fade in effect
   chart1.data = data;
   chart1.radius = am4core.percent(70);
@@ -121,7 +122,7 @@ function Co2Visualization(props) {
   // second chart
   var chart2 = container.createChild(am4charts.PieChart);
   chart2.hiddenState.properties.opacity = 0; // this makes initial fade in effect
-  chart2 .fontSize = 11;
+  chart2.fontSize = 11;
   chart2.radius = am4core.percent(70);
   chart2.data = data;
   chart2.innerRadius = am4core.percent(40);
@@ -174,7 +175,7 @@ function Co2Visualization(props) {
   
       if (targetSlice === slice1) {
           if (targetSlicePoint.x > container.pixelWidth / 2) {
-              var value = dataItem1.value;
+            //   var value = dataItem1.value;
   
               dataItem1.hide();
   
@@ -195,7 +196,7 @@ function Co2Visualization(props) {
       if (targetSlice === slice2) {
           if (targetSlicePoint.x < container.pixelWidth / 2) {
   
-              var value = dataItem2.value;
+            //   var value = dataItem2.value;
   
               dataItem2.hide();
   

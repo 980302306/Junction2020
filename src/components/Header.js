@@ -1,32 +1,28 @@
 import React from 'react'
 import Logo from '../img/Logo.png'
-import Stripe from '../img/Stripe.png'
+import HKScan from '../img/HKScan.png'
 import { Link } from "react-router-dom"
 const Header=()=>{
-  const HeaderStyle={
-    paddingTop  :'2em',
-  }
   const LogoStyle={
-    position: 'absolute', left: '45%', top:'3%'
+    position: 'absolute', left: '46%', top: '10%'
   }
-  const BgStyle = {
-    backgroundSize: 'cover',
-    height: "100%",
-    backgroundImage: `url(${Stripe})`
+  const NavStyle={
+    backgroundColor:'white'
   }
-
   return(
-    <section className="hero" style={BgStyle} >
-      <div className="hero-body">
-        <div className='container'>
-          <div style={LogoStyle}>
-          <Link to={`/`}> 
-          <img src={Logo} alt="logo" width='60%' height='60%'/>
-          </Link>
-          </div>
-        </div>
+    <nav className="navbar" role="navigation" aria-label="main navigation" style={NavStyle}>
+      <div className="navbar-brand">
+        <a className="navbar-item" href="https://www.hkscan.com/en/">
+          <img src={HKScan} alt='HKscan logo' width="112" height="28"/>
+        </a>
       </div>
-    </section>
+
+      <div className="navbar-item" style={LogoStyle}>
+        <Link to={`/`}> 
+          <img src={Logo} alt="logo"/>
+        </Link>
+      </div>
+    </nav>
   )
 
 }

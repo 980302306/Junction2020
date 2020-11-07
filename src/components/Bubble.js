@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Font.css'
 
 const Bubble=({text,left,top, show})=>{
   if (show==='No') return null 
@@ -14,7 +14,7 @@ const Bubble=({text,left,top, show})=>{
       <div className='card is-rounded' style={BubbleStyle}>
         {/* <div className='subtitle is-6'> {text}</div> */}
       <div className="card-content">
-        <div className='content is-6'>{text}</div>
+        <div className='content is-6 BlackRegular'>{text}</div>
       </div>
       </div>
     </div>

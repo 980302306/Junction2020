@@ -1,6 +1,7 @@
 import React from 'react'
 import Background from '../img/envResonsibility.png'
 import Header from './Header'
+import WaterVisualization from './WaterVisualization'
 const H2O=()=>{
   const BgStyle={
     backgroundSize: 'cover',
@@ -21,11 +22,13 @@ const H2O=()=>{
     fontSize: 13
   }
   const DatavizStyle={
-    position: 'absolute', left:'15%', top:'15%',
+    position: 'absolute', left:'35%', top:'15%',
     width:1700,
     height:600,
     opacity:1
+
   }
+  
   return(
     <section className="hero is-fullheight" style={BgStyle}>
       <Header />
@@ -39,16 +42,12 @@ const H2O=()=>{
               <span style={SubTitleStyle}> Water <br/>Footprint</span>
             </div>
             <div className='column is-one-third' style={DatavizStyle}>
-              
+              <WaterVisualization />
             </div>
           </div>
-          
         </div>
         </div>
       </div>
-      {/* <div className="block">
-       This text is within a
-      </div> */}
     </section>
   )
 }

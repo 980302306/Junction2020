@@ -1,7 +1,6 @@
-import { height } from '@amcharts/amcharts4/.internal/core/utils/Utils'
-import { Button } from '@amcharts/amcharts4/core'
 import React from 'react'
-const WelfarePanel=({title,show,setShow})=>{
+import Vizcontent from './Vizcontent'
+const WelfarePanel=({title,show,setShow,btnIndex})=>{
   if(show==='Yes') return null
   const CardStyle={
     opacity:1,
@@ -25,12 +24,13 @@ const WelfarePanel=({title,show,setShow})=>{
       <div className="card-content">
         <div className='columns'>
           <div className='column is-four-fifths'>
-            <p className='title' style={titleStyle}>"{title}"</p>
+            <p className='title BI' style={titleStyle}>"{title}"</p>
           </div>
           <div className='column is-one-fifth'>
             <button className='delete' aria-label='delete' style={ButtonStyle} onClick={close}></button>
           </div>
         </div>
+        <Vizcontent btnIndex={btnIndex}/>
       </div>
     </div>
   )

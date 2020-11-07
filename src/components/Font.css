@@ -1,0 +1,33 @@
+@font-face {
+  font-family: BoldFont;
+  src: url('../fontStyle/Omnes\ Bold.ttf');
+}
+@font-face {
+  font-family: RegularFont;
+  src: url('../fontStyle/Omnes.ttf');
+}
+
+@font-face {
+  font-family: BIFont;
+  src: url('../fontStyle/Omnes\ Bold\ Italic.ttf');
+}
+
+.Bold{
+  font-family: BoldFont;
+  color:rgb(21,38,116)
+}
+
+.WhiteRegular{
+  font-family: RegularFont;
+  color:white
+}
+
+.BlackRegular{
+  font-family: RegularFont;
+  color:black
+}
+
+.BI{
+  font-family: BIFont;
+  color:white
+}
