@@ -1,16 +1,26 @@
 import React from 'react'
 import Logo from '../img/Logo.png'
+import Stripe from '../img/Stripe.png'
 const Header=()=>{
   const HeaderStyle={
     paddingTop  :'2em',
-    paddingButtom  :'1em'
+  }
+  const LogoStyle={
+    position: 'absolute', left: '45%', top:'3%'
+  }
+  const BgStyle = {
+    backgroundSize: 'cover',
+    height: "100%",
+    backgroundImage: `url(${Stripe})`
   }
   return(
-      <nav className="level" style={HeaderStyle}>
-        <p className="level-item has-text-centered">
-        <img src={Logo} alt="logo" width='208' height='45'/>
-        </p>
-      </nav> 
+    <section class="hero" style={BgStyle} >
+      <div class="hero-body">
+        <div style={LogoStyle}>
+          <img src={Logo} alt="logo" width='60%' height='60%'/>
+        </div>
+      </div>
+    </section>
   )
 
 }
