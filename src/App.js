@@ -11,7 +11,6 @@ const App=()=>{
 
   return(
     <div >
-      <Header />
       <Switch>
         <Route path='/meat/cows'>
           <Cow />
