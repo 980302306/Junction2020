@@ -14,10 +14,12 @@ const Header=()=>{
     backgroundImage: `url(${Stripe})`
   }
   return(
-    <section class="hero" style={BgStyle} >
-      <div class="hero-body">
-        <div style={LogoStyle}>
-          <img src={Logo} alt="logo" width='60%' height='60%'/>
+    <section className="hero" style={BgStyle} >
+      <div className="hero-body">
+        <div className='container'>
+          <div style={LogoStyle}>
+            <img src={Logo} alt="logo" width='60%' height='60%'/>
+          </div>
         </div>
       </div>
     </section>
