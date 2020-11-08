@@ -60,4 +60,5 @@ After gaining the data from customers, we input the data to our NLP Semantic ana
 ## Demo Video
 
 Enjoy😊 https://www.youtube.com/watch?v=B14ouUCBpmg&feature=youtu.be
+https://www.bilibili.com/video/BV1WA411j7rc
 
