@@ -6,6 +6,9 @@ import './Button.css'
 import './Font.css'
 import WelfarePanel from './WelfarePanel'
 import Panel from './Panel'
+
+// import SideBar from './SideBar'
+
 const Cow=()=>{
   const [firstBubble,setFirstBubble]=useState('No')
   const [secondBubble,setSecondBubble]=useState('No')
@@ -54,6 +57,7 @@ const Cow=()=>{
       <Header />
         <div className='hero-body'>
           <div >
+            {/* <SideBar/> */}
             <button className='TransparentButton pos1 WhiteRegular' onClick={clickSideBarBtn1}>0 day<br/>Born</button>
             <button className='TransparentButton pos2 WhiteRegular' onClick={clickSideBarBtn2}>200 days<br/>Weaned</button>
             <button className='TransparentButton pos3 WhiteRegular' onClick={clickSideBarBtn3}>400 days<br/>Finishing Phase</button>

@@ -57,7 +57,7 @@ const Env=()=>{
           <div className='card' style={Card1Style}>
             <div className="card-content">
               <Link to={`/env/co2`}>
-                <h1 class="title is-1" style={Title1Style}>CO2</h1>
+                <h1 className="title is-1" style={Title1Style}>CO2</h1>
               </Link>
               <span style={SubTitle1Style}>Carbon <br/>Footprint</span>
             </div>

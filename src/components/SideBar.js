@@ -9,7 +9,7 @@ const SideBar=()=>{
     <ul>
     {
       data.map(key => (
-        <li key={key}>item{key}</li>
+        <li key={key}><span key={key+10}></span></li>
       ))
     }
   </ul>

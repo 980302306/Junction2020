@@ -2,7 +2,9 @@ import React from 'react'
 import Background from '../img/envResonsibility.png'
 import Header from './Header'
 import Co2Visualization from './Co2Visualization'
+import { useHistory } from "react-router-dom"
 const CO2=()=>{
+  const history = useHistory()
   const BgStyle={
     backgroundSize: 'cover',
     height: "100%",
@@ -27,11 +29,19 @@ const CO2=()=>{
     height:600,
     opacity:1
   }
+  const ButtonStyle={
+    position: 'absolute', left:'98%',top:'2%'
+  }
+  const close=()=>{
+    history.push('/meat/visualization')
+    
+  }
   return(
     <section className="hero is-fullheight" style={BgStyle}>
       <Header />
       <div>
         <div className='card' style={CardStyle}>
+        <button className='delete' aria-label='delete' style={ButtonStyle} onClick={close}> test</button>
         <div className="card-content">
           {/* <div className='content is-6'>CO2</div> */}
           <div className='columns'>
