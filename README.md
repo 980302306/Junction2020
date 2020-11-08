@@ -81,6 +81,8 @@ Bilibili:https://www.bilibili.com/video/BV1WA411j7rc
 - YiLei Zhang
 - Fengyu Li
 
+## Final Result
 
+We finally won the third prize in this challenge.
 
-
+![Rank](src/img/ThirdPrize.png)
