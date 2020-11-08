@@ -62,7 +62,7 @@ After gaining the data from customers, we input the data to our NLP Semantic ana
 - Motivation: collect user feedback and use natural language process( `AI`） to do semantic analysis and sentiment analysis.
 
 - Scan QR Code to visit http://weemeat.pythonanywhere.com/
-- ![flowcode](https://github.com/980302306/Junction2020/tree/main/src/img/flowcode.png)
+- ![flowcode](src/img/flowcode.png)
 
 ## Demo Video
 
@@ -70,11 +70,11 @@ Enjoy😊
 
 Youtube: https://www.youtube.com/watch?v=B14ouUCBpmg&feature=youtu.be
 
-Bilibili:
+Bilibili:https://www.bilibili.com/video/BV1WA411j7rc
 
 ## About WeMeat Team:
 
-![Logo](https://github.com/980302306/Junction2020/tree/main/src/img/Logo.png)
+![Logo](src/img/Logo.png)
 
 - Xiaobo Wu
 - Haoping Xiao
@@ -83,5 +83,4 @@ Bilibili:
 
 
 
-https://www.bilibili.com/video/BV1WA411j7rc
 
