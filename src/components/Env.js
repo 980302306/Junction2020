@@ -43,7 +43,7 @@ const Env=()=>{
       <div className='columns'>
         <div className='column is-one-third'>
           <div style={TextStyle}>
-            <h3 className='title is-3'>Towards Carbon neutrality</h3>
+            <h3 className='title is-3 BI' >Towards Carbon neutrality</h3>
             <span>We make food from responsibly produced raw<br/> 
             materials in the middle of the cleanest nature in the<br/>
             world. Fresh air, abundant water resources and a high<br/>

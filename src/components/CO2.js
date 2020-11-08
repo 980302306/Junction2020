@@ -2,6 +2,7 @@ import React from 'react'
 import Background from '../img/envResonsibility.png'
 import Header from './Header'
 import Co2Visualization from './Co2Visualization'
+import './Font.css' 
 const CO2=()=>{
   const BgStyle={
     backgroundSize: 'cover',
@@ -36,8 +37,8 @@ const CO2=()=>{
           {/* <div className='content is-6'>CO2</div> */}
           <div className='columns'>
             <div className='column is-one-third'>
-              <h1 class="title is-1" style={TitleStyle}>CO2</h1>
-              <span style={SubTitleStyle}>Carbon <br/>Footprint</span>
+              <h1 style={TitleStyle} className='Bold'>CO2</h1>
+              <p style={SubTitleStyle} className='Bold'>Carbon <br/>Footprint</p>
             </div>
             <div className='column is-one-third' style={DatavizStyle}>
               < Co2Visualization/>
