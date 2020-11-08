@@ -35,21 +35,25 @@ const Cow=()=>{
     setShowPanel('No')
     setWelfarePanelTitle('We live in good house.')
     setSidebarBthIndex("1")
+    setFirstBubble('No')
   }
   const clickSideBarBtn2=()=>{
     setShowPanel('No')
     setWelfarePanelTitle('We have good relationship with human.')
     setSidebarBthIndex("2")
+    setSecondBubble('No')
   }
   const clickSideBarBtn3=()=>{
     setShowPanel('No')
     setWelfarePanelTitle('We are fed well.')
     setSidebarBthIndex("3")
+    setThirdBubble('No')
   }
   const clickSideBarBtn4=()=>{
     setShowPanel('No')
     setWelfarePanelTitle('We are in very good health.')
     setSidebarBthIndex("4")
+    setFourthBubble('No')
   }
   return(
     <div>
@@ -65,7 +69,8 @@ const Cow=()=>{
             <Panel showFirstBubble={showFirstBubble} showSecondBubble={showSecondBubble} showThirdBubble={showThirdBubble} showFourthBubble={showFourthBubble}
                    hideFirstBubble={hideFirstBubble} hideSecondBubble={hideSecondBubble} hideThirdBubble={hideThirdBubble} hideFourthBubble={hideFourthBubble}
                    firstBubble={firstBubble} secondBubble={secondBubble} thirdBubble={thirdBubble} fourthBubble={fourthBubble}
-                   showPanel={showPanel} />
+                   setShow1={clickSideBarBtn1} setShow2={clickSideBarBtn2} setShow3={clickSideBarBtn3} setShow4={clickSideBarBtn4}
+                   showPanel={showPanel}/>
             <WelfarePanel title={WelfarePanelTitle} show={showPanel} setShow={setShowPanel} btnIndex={SidebarBthIndex}/>
           </div>
         </div>

@@ -48,8 +48,8 @@ const CO2=()=>{
           {/* <div className='content is-6'>CO2</div> */}
           <div className='columns'>
             <div className='column is-one-third'>
-              <h1 style={TitleStyle} className='Bold'>CO2</h1>
-              <p style={SubTitleStyle} className='Bold'>Carbon <br/>Footprint</p>
+              <h1 style={TitleStyle} className='title is-1 Bold'>CO2</h1>
+              <span style={SubTitleStyle} className='BlackRegular'>Carbon <br/>Footprint</span>
             </div>
             <div className='column is-one-third' style={DatavizStyle}>
               < Co2Visualization/>

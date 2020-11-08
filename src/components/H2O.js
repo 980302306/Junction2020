@@ -47,8 +47,8 @@ const H2O=()=>{
           {/* <div className='content is-6'>CO2</div> */}
           <div className='columns'>
             <div className='column is-one-third'>
-              <h1 class="title is-1" style={TitleStyle}>H2O</h1>
-              <span style={SubTitleStyle}> Water <br/>Footprint</span>
+              <h1 className="title is-1 Bold" style={TitleStyle}>H2O</h1>
+              <span className='BlackRegular' style={SubTitleStyle}> Water <br/>Footprint</span>
             </div>
             <div className='column is-one-third' style={DatavizStyle}>
               <WaterVisualization />

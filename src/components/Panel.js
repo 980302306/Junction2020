@@ -3,7 +3,8 @@ import Bubble from './Bubble'
 import Card from './Card'
 const Panel =({showFirstBubble,showSecondBubble,showThirdBubble,showFourthBubble,
                hideFirstBubble,hideSecondBubble,hideThirdBubble,hideFourthBubble,
-              firstBubble,secondBubble,thirdBubble,fourthBubble,showPanel})=>{
+              firstBubble,secondBubble,thirdBubble,fourthBubble,
+              setShow1,setShow2,setShow3,setShow4,showPanel})=>{
   if(showPanel!=='Yes')return null
   const firstButtonStyle={
     position: 'absolute', left: '10.45138%', top:'86.9%',
@@ -24,16 +25,16 @@ const Panel =({showFirstBubble,showSecondBubble,showThirdBubble,showFourthBubble
   return(
     <div>
       <div>
-        <button className='button is-small' style={firstButtonStyle} onMouseOver={showFirstBubble} onMouseLeave={hideFirstBubble}></button>
+        <button className='button is-small' style={firstButtonStyle} onMouseOver={showFirstBubble} onMouseLeave={hideFirstBubble} onClick={setShow1}></button>
       </div>
       <div>
-        <button className='button is-small' style={secondButtonStyle} onMouseOver={showSecondBubble} onMouseLeave={hideSecondBubble}></button>
+        <button className='button is-small' style={secondButtonStyle} onMouseOver={showSecondBubble} onMouseLeave={hideSecondBubble} onClick={setShow2}></button>
       </div>
       <div>
-        <button className='button is-small' style={thirdButtonStyle} onMouseOver={showThirdBubble} onMouseLeave={hideThirdBubble}></button>
+        <button className='button is-small' style={thirdButtonStyle} onMouseOver={showThirdBubble} onMouseLeave={hideThirdBubble} onClick={setShow3}></button>
       </div>
       <div>
-        <button className='button is-small' style={fourthButtonStyle} onMouseOver={showFourthBubble} onMouseLeave={hideFourthBubble}></button>
+        <button className='button is-small' style={fourthButtonStyle} onMouseOver={showFourthBubble} onMouseLeave={hideFourthBubble} onClick={setShow4}> </button>
       </div>
       <section className='section'>
         <Bubble text='We are fed well' left='13%' top='86.9%'  show={firstBubble}/>
